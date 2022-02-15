@@ -4,12 +4,12 @@ import './Movie.css';
 import { Link } from 'react-router-dom';
 
 
-function Movie({ year, title, summary, poster, genres}) {
+function Movie({ id,year, title, summary, poster, genres}) {
     return (
         <div className="movie">
             <Link to={{
                 pathname: '/movie-detail',
-                state: { year, title, summary, poster, genres },
+                state: { year, title, summary, poster, genres }
             }}
             >
             <img src={poster} alt={title} title={title} />
